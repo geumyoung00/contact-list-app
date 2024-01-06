@@ -8,9 +8,12 @@ body {
 }
 
 .App {
-	width: 90%;
+	width: 94%;
+	height: auto;
 	margin: 0 auto;
+	padding-bottom: 40px;
 	text-align: center;
+	box-sizing: border-box;
 }
 
 .App-logo {

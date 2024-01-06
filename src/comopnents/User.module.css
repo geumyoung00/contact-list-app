@@ -1,7 +1,8 @@
 .lists {
 	display: flex;
 	flex-flow: row wrap;
-	grid-gap: 20px;
+	grid-gap: 16px;
+	margin-bottom: 40px;
 }
 
 .userBox {
@@ -10,8 +11,8 @@
 	justify-content: flex-start;
 	align-items: flex-start;
 	grid-gap: 15px;
-	width: 25%;
-	min-width: 340px;
+	width: calc(25% - 12px);
+	min-width: 320px;
 	background: #fff;
 	padding: 16px 20px;
 	text-align: left;
@@ -22,7 +23,11 @@
 }
 
 .profileImg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 32px;
+	min-width: 32px;
 	height: 32px;
 	flex-shrink: 1;
 	background: plum;
