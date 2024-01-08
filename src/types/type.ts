@@ -1,4 +1,4 @@
-export interface user {
+export interface User {
 	login: { uuid: string };
 	name: { first: string; last: string };
 	phone: string;

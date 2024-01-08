@@ -1,8 +1,8 @@
 import classes from './User.module.css';
 import { UserItem } from './UserItem';
-import { user } from '../types/type';
+import { User } from '../types/type';
 
-export const UsersList = ({ users }: { users: user[] }) => {
+export const UsersList = ({ users }: { users: User[] }) => {
 	return (
 		<ul className={classes.lists}>
 			{users.map(item => {
