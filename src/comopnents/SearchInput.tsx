@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UsersContext } from '../store/user-context';
 import classes from './Form.module.css';
 
-export const SearchInput = ({
-	inputHandler,
-}: {
-	inputHandler: (text: string) => void;
-}) => {
+export const SearchInput = () => {
+	const usersCtx = useContext(UsersContext);
+
 	const inputChange = (e: React.ChangeEvent) => {
 		const target = e.target as HTMLFormElement;
 		const text = target.value;
-		inputHandler(text);
+		usersCtx.inputHandler(text);
 	};
 
 	return (

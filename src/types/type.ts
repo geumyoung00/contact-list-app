@@ -6,3 +6,8 @@ export interface User {
 	dob: { date: string };
 	picture: { thumbnail: string };
 }
+
+export interface UsersContextType {
+	users: User[];
+	inputHandler: (text: string) => void;
+}
