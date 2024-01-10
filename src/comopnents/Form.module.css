@@ -1,0 +1,30 @@
+.form {
+	margin: 40px auto;
+}
+
+.inputText {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-progress-appearance: none;
+	width: 60%;
+	max-width: 420px;
+	min-width: 200px;
+	height: 42px;
+	font-size: 18px;
+	line-height: 28px;
+	background: #f0f0f0;
+	border-radius: 4px;
+	padding: 0 16px;
+	box-sizing: border-box;
+	border: 1px solid #aaa;
+	outline: 1px solid rgba(0, 118, 235, 0);
+	transition: ease 0.3s all;
+	transition-property: border-radius;
+}
+.inputText:focus {
+	border: 1px solid transparent;
+	outline: 1px solid rgba(0, 118, 235, 1);
+	background: rgb(227, 243, 255);
+	border-radius: 42px;
+}

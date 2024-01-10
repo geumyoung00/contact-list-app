@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { UsersList } from './comopnents/UsersList';
+import { SearchInput } from './comopnents/SearchInput';
+import { UsersProvider } from './store/user-context';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<UsersProvider>
+			<div className='App'>
+				<h1>Contact list</h1>
+				<SearchInput />
+				<UsersList />
+			</div>
+		</UsersProvider>
+	);
 }
 
 export default App;
