@@ -5,9 +5,11 @@ import classes from './Form.module.css';
 export const SearchInput = () => {
 	const usersCtx = useContext(UsersContext);
 
-	const inputChange = (e: React.ChangeEvent) => {
-		const target = e.target as HTMLFormElement;
-		const text = target.value;
+	// const inputChange = (e: React.ChangeEvent) => {
+	// 	const target = e.target as HTMLFormElement;
+
+	const inputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const text = e.target.value;
 		usersCtx.inputHandler(text);
 	};
 

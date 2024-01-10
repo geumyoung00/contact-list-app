@@ -8,7 +8,7 @@ export const UsersContext = createContext<UsersContextType>({
 	inputHandler: () => {},
 });
 
-let initUser: User[] = [];
+let initUsers: User[] = [];
 
 export const UsersProvider = ({ children }: { children: React.ReactNode }) => {
 	const [users, setUsers] = useState<User[]>([]);
@@ -21,7 +21,7 @@ export const UsersProvider = ({ children }: { children: React.ReactNode }) => {
 				);
 				const data = res.data.results;
 				setUsers(data);
-				initUser = data;
+				initUsers = data;
 			} catch (error) {
 				console.error('error__', error);
 			}
@@ -30,7 +30,7 @@ export const UsersProvider = ({ children }: { children: React.ReactNode }) => {
 	}, []);
 
 	const inputHandler = (text: string) => {
-		const newUser = initUser.filter(
+		const newUser = initUsers.filter(
 			user =>
 				user.name.first.toLowerCase().includes(text.toLowerCase()) ||
 				user.name.last.toLowerCase().includes(text.toLowerCase())
